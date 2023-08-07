@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_netflix/cubit/animation_status_cubit.dart';
 import 'package:flutter_netflix/model/movie.dart';
+import 'package:flutter_netflix/screens/game.dart';
 import 'package:flutter_netflix/screens/home.dart';
 import 'package:flutter_netflix/screens/movie_details.dart';
 import 'package:flutter_netflix/screens/netflix_scaffold.dart';
@@ -108,6 +109,19 @@ class NetflixApp extends StatelessWidget {
                   },
                 ),
 
+              ]),
+          GoRoute(
+              path: '/game',
+              builder: (BuildContext context, GoRouterState state) {
+                return const Game(isLoading: true,counter: 0,child: MyCenterWidget());
+              },
+              routes: [
+                GoRoute(
+                  path: 'details',
+                  builder: (BuildContext context, GoRouterState state) {
+                    return MovieDetailsScreen(movie: state.extra as Movie);
+                  },
+                ),
               ]),
           GoRoute(
               path: '/newandhot',

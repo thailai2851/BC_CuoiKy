@@ -53,6 +53,9 @@ class _NextflixBottomNavigationState extends State<NextflixBottomNavigation> {
           case 0:
             context.go('/home');
             break;
+          case 1:
+            context.go('/game');
+            break;
           case 2:
             context.go('/newandhot');
             break;
