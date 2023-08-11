@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print, overridden_fields, annotate_overrides
+
 import 'package:flutter/material.dart';
 import '../utils/utils.dart';
 

@@ -210,9 +210,9 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen>
               ],
             ),
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: const [
+            children: [
               NewAndHotTileAction(
                 icon: LucideIcons.plus,
                 label: 'My List',
@@ -358,7 +358,7 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen>
       },
     );
 
-    Overlay.of(context, rootOverlay: true)?.insert(overlay);
+    Overlay.of(context, rootOverlay: true).insert(overlay);
   }
 
   Widget _seasonDropdown(Movie movie, int seasonNumber) {
